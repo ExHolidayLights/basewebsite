@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-H Exchange Club Holiday Light Show</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e2e1e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .logo {
+            width: 150px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        /* Nav Bar */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #285430;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x600');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            padding: 60px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 30px;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            color: #285430;
+        }
+
+        /* Contact & Advertising Forms */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border: 2px solid #285430;
+            border-radius: 10px;
+        }
+
+        form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #285430;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        form button:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+        /* Photo Carousel */
+        .carousel {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .carousel img {
+            min-width: 100%;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .carousel-buttons button {
+            background-color: #285430;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-buttons button:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+        /* Schedule Section */
+        .schedule table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .schedule table, th, td {
+            border: 1px solid #285430;
+        }
+
+        .schedule th, .schedule td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .schedule th {
+            background-color: #285430;
+            color: white;
+        }
+
+        .schedule td {
+            background-color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e2e1e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>4-H Exchange Club Holiday Light Show</h1>
+        <img src="logo.png" alt="2024 Holiday Light Show Logo" class="logo">
+        <p>Bringing Holiday Cheer to the Community!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#show">Holiday Light Show</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#advertising">Advertising</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Experience the Magic of Lights!</h2>
+        <p>Join us this season for a beautiful display of holiday lights and community spirit.</p>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>The 4-H Exchange Club Holiday Light Show is a non-profit event organized to raise funds for youth development and community service.</p>
+        <p>Every year, volunteers and community members come together to create a magical display of lights. Proceeds go directly to support youth programs, leadership development, and community-building initiatives.</p>
+    </section>
+
+    <!-- Holiday Light Show Section -->
+    <section id="show">
+        <h2>Holiday Light Show</h2>
+        <p>Come and witness a magical world of lights, music, and fun! Stay tuned for event dates and timings.</p>
+        <!-- Photo Carousel -->
+        <div class="carousel" id="carousel">
+            <img src="https://via.placeholder.com/1200x600" alt="Light Show 1">
+            <img src="https://via.placeholder.com/1200x600" alt="Light Show 2">
+            <img src="https://via.placeholder.com/1200x600" alt="Light Show 3">
+        </div>
+        <div class="carousel-buttons">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+<!-- Schedule Section with Calendar -->
+<section id="schedule">
+    <h2>Event Schedule</h2>
+    <p>We are open every day from December 1 to December 25, 6:00 PM - 9:00 PM.</p>
+    <div class="calendar">
+        <div class="calendar-header">
+            <h3>December 2024</h3>
+        </div>
+        <div class="calendar-grid">
+            <!-- Days of the week -->
+            <div class="calendar-day header">Sun</div>
+            <div class="calendar-day header">Mon</div>
+            <div class="calendar-day header">Tue</div>
+            <div class="calendar-day header">Wed</div>
+            <div class="calendar-day header">Thu</div>
+            <div class="calendar-day header">Fri</div>
+            <div class="calendar-day header">Sat</div>
+
+            <!-- Empty slots for alignment -->
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <div class="calendar-day">6</div>
+            <div class="calendar-day">7</div>
+            <div class="calendar-day">8</div>
+            <div class="calendar-day">9</div>
+            <div class="calendar-day">10</div>
+            <div class="calendar-day">11</div>
+            <div class="calendar-day">12</div>
+            <div class="calendar-day">13</div>
+            <div class="calendar-day">14</div>
+            <div class="calendar-day">15</div>
+            <div class="calendar-day">16</div>
+            <div class="calendar-day">17</div>
+            <div class="calendar-day">18</div>
+            <div class="calendar-day">19</div>
+            <div class="calendar-day">20</div>
+            <div class="calendar-day">21</div>
+            <div class="calendar-day">22</div>
+            <div class="calendar-day">23</div>
+            <div class="calendar-day">24</div>
+            <div class="calendar-day last-day">25</div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .calendar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .calendar-header {
+        background-color: #285430;
+        color: white;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        border: 2px solid #285430;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .calendar-day {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ccc;
+        background-color: #fff;
+    }
+
+    .calendar-day.header {
+        font-weight: bold;
+        background-color: #285430;
+        color: white;
+        border: 1px solid #285430;
+    }
+
+    .calendar-day.empty {
+        background-color: #f7f7f7;
+        border: none;
+    }
+
+    .calendar-day.last-day {
+        font-weight: bold;
+        color: #d62828;
+    }
+</style>
+
+
+    <!-- Advertising Section -->
+    <section id="advertising">
+        <h2>Advertise With Us</h2>
+        <p>Support a great cause and promote your business by advertising at our event. Contact us for sponsorship opportunities and package details.</p>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email">
+            <label for="message">Your Inquiry</label>
+            <textarea id="message" rows="4"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions about the event or would like to get involved, please reach out!</p>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="4"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 4-H Exchange Club Holiday Light Show. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Photo Carousel Script
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#carousel img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((img, i) => {
+                img.style.transform = `translateX(${-100 * index}%)`;
+            });
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+            showSlide(currentSlide);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
